@@ -1,1 +1,12 @@
-#
+gcta64	--pfile your_pfile \
+	--grm-sparse your_sp_grm \
+	--keep keep.tsv \
+	--pheno pheno.tsv \
+	--qcovar qcovar.tsv \
+	--extract info0.4_maf0.01.snplist \
+	--out your_GWAS_model \
+	--fastGWA-mlm-binary \
+	--model-only \
+	--seed 1 \
+	--threads 4 \
+	--nofilter \ 
