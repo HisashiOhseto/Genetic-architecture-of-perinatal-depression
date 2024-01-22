@@ -1,3 +1,4 @@
+#GCTA
 gcta64	--pfile your_pfile \
 	--grm-sparse your_sp_grm \
 	--keep keep.tsv \
@@ -14,7 +15,26 @@ gcta64	--pfile your_pfile \
 gcta64	--pfile your_pfile \
 		--load-model your_GWAS_model.fastGWA \
 		--extract info0.4_maf0.01.snplist \
-		--out result \
+		--out your_GWAS_result \
 		--seed 1 \
 		--threads 4 \
 		--nofilter \
+
+#PRSice
+Rscript your_PRSice_directory/PRSice.R \
+	--dir your_PRSice_directory \
+	--prsice your_PRSice_directory/PRSice_linux \
+	--base your_GWAS_result \
+	--target your_bed_file \
+	--pheno pheno.tsv \
+	--out your_clumping_result \
+	--extract info0.4_maf0.01.snplist \
+	--thread max \
+	--chr-id T \
+	--clump-p 1e-4 \
+	--clump-r2 0.1 \
+	--clump-kb 3000 \
+	--snp SNP \
+	--chr-id c:l_a_b \
+	--print-snp \
+	--keep-ambig
