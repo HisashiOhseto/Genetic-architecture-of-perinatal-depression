@@ -39,6 +39,11 @@ Rscript your_PRSice_directory/PRSice.R \
 	--print-snp \
 	--keep-ambig
 
+#Annovar
+annotate_variation.pl \
+	-out your_annotation \
+	-build hg19 your_clumping_result your_annovar_directory
+
 
 #METAL
 marker SNP 
@@ -49,7 +54,6 @@ weight N
 STDERR SE
 process Jpav2_result
 process Jpav3_result
-
 
 outfile metal_result.tbl
 analyze
