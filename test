@@ -38,3 +38,19 @@ Rscript your_PRSice_directory/PRSice.R \
 	--chr-id c:l_a_b \
 	--print-snp \
 	--keep-ambig
+
+
+#METAL
+marker SNP 
+allele A1 A2 
+effect BETA
+pvalue P 
+weight N 
+STDERR SE
+process Jpav2_result
+process Jpav3_result
+
+
+outfile metal_result.tbl
+analyze
+quit
