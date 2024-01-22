@@ -9,4 +9,12 @@ gcta64	--pfile your_pfile \
 	--model-only \
 	--seed 1 \
 	--threads 4 \
-	--nofilter \ 
+	--nofilter
+
+gcta64	--pfile your_pfile \
+		--load-model your_GWAS_model.fastGWA \
+		--extract info0.4_maf0.01.snplist \
+		--out result \
+		--seed 1 \
+		--threads 4 \
+		--nofilter \
