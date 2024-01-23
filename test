@@ -62,7 +62,7 @@ quit
 #LDSC
 list=("Dep" "pregnancyDep" "earlyPostDep" "latePostDep" "chronicDep")
 ldsc/munge_sumstats.py \
-	--sumstats your_GWAS_result__${list[i]} \
+	--sumstats your_GWAS_result_${list[i]} \
 	--snp ID \
 	--out your_reformatted_GWAS_result_${list[i]} \
 	--merge-alleles w_hm3.snplist
@@ -83,3 +83,8 @@ for (( i=0; i<${#list[@]}; i++ )); do
 			--out ${list[i]}_${list[j]}
 	done
 done
+
+#FOCUS
+focus munge \
+	your_GWAS_result_${list[i]} \
+	--output your_cleaned_GWAS_result_${list[i]}
