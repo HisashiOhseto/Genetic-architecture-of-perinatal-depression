@@ -88,3 +88,13 @@ done
 focus munge \
 	your_GWAS_result_${list[i]} \
 	--output your_cleaned_GWAS_result_${list[i]}
+
+
+focus finemap \
+	your_cleaned_GWAS_result_${list[i]} \
+	your_bed_file \
+	focus.db \
+	--prior-prob gencode37 \
+	--location 37:EUR-EAS \
+	--p-threshold 1e-6 \
+	--out your_focus_result
