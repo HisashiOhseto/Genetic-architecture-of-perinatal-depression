@@ -58,3 +58,11 @@ process Jpav3_result
 outfile metal_result.tbl
 analyze
 quit
+
+#LDSC
+ldsc/munge_sumstats.py \
+	--sumstats your_GWAS_result \
+	--snp ID \
+	--out your_reformatted_GWAS_result \
+	--merge-alleles w_hm3.snplist
+
