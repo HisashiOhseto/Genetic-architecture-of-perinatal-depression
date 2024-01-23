@@ -67,6 +67,12 @@ ldsc/munge_sumstats.py \
 	--out your_reformatted_GWAS_result_${list[i]} \
 	--merge-alleles w_hm3.snplist
 
+ldsc/ldsc.py \
+	--h2 your_reformatted_GWAS_result_${list[i]}.sumstats.gz \
+	--ref-ld-chr eas_ldscores/ \
+	--w-ld-chr eas_ldscores/ \
+	--out ${list[i]} 
+
 list=("Dep" "pregnancyDep" "earlyPostDep" "latePostDep" "chronicDep")
 for (( i=0; i<${#list[@]}; i++ )); do
 	for (( j=i+1; j<${#list[@]}; j++ )); do
