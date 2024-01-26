@@ -1,2 +1,1 @@
-# Test
-Test
+The codes in each file are the codes actually used in the study. However, they are incomplete because cohort data cannot be taken outside. ScriptSummary.sh is the program summary used in this study. Please change the paths to suit your environment.
